@@ -1,0 +1,1 @@
+# huskyspot-frontend
