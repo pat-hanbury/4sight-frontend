@@ -1,1 +1,6 @@
-<p>dashboard works!</p>
+<h2>Marino Gym</h2>
+<ul class="area">
+    <li *ngFor="let area of areas" (click)="onSelect(area)" [class.selected]="area === selectedArea">
+        <span class="area-span">{{area.id}}</span> {{area.name}}
+    </li>
+</ul>
