@@ -9,3 +9,4 @@ Ubuntu:
 `sudo npm install -g @angular/cli`
 3. Run app on localhost:4200
 `ng serve`
+`ng serve --host 0.0.0.0 --port 8080`
