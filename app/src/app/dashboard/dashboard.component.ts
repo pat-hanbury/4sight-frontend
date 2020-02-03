@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Area } from '../models';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,31 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  areas: Area[] = [
-    {id: 1, name: "area 1", img: "image to display"}, 
-    {id: 2, name: "area 2", img: "image to display"}, 
-    {id: 3, name: "area 3", img: "image to display"}, 
-    {id: 4, name: "area 4", img: "image to display"}, 
-    {id: 5, name: "area 5", img: "image to display"}, 
-  ];
+  areas: Area[];
 
   selectedArea: Area;
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
+    this.getAreas();
   }
 
-  onSelect(area) {
+  onSelect(area: Area): void {
     console.log(area);
     this.selectedArea = area;
   }
 
-}
+  getAreas(): void {
+    // this is a asyncronos call to the api 
+    this.apiService.getAreas().subscribe(data => this.areas = data);
+  }
 
 
-export class Area {
-  id: number;
-  name: string;
-  img: string;
 }

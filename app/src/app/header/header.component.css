@@ -1,0 +1,30 @@
+nav {
+    color:#FFFFFF;
+  background-color:hsl(180 80% 25%);
+  }
+  
+  h1 {
+    background-color:hsl(180 80% 25%);
+    text-indent: 10px;
+    padding-top: 10px;
+  }
+  
+  nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+
+  nav li:hover {
+    color: #e5ae38;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
