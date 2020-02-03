@@ -1,6 +1,6 @@
 <h2>Marino Gym</h2>
 <ul class="area">
-    <li *ngFor="let area of areas" (click)="onSelect(area)" [class.selected]="area === selectedArea">
+    <li *ngFor="let area of areas" (click)="onSelect(area)" routerLink="/feeds/{{area.id}}" [class.selected]="area === selectedArea">
         <span class="area-span">{{area.id}}</span> {{area.name}}
     </li>
 </ul>

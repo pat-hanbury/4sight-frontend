@@ -1,1 +1,7 @@
-<p>feed-view works!</p>
+<div>{{ area.name }}</div>
+<ul>
+    <li *ngFor="let feed of feeds">
+        <img src="{{ feed.url }}">
+    </li>
+</ul>
+<button (click)="goBack()">go back</button>

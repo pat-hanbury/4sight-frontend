@@ -8,5 +8,5 @@ export class Feed {
     id: number;
     name: string;
     count: number;
-    area_id: number
+    url: string;
 }
