@@ -35,7 +35,6 @@ export class FeedViewComponent implements OnInit {
   }
 
   getFeeds() {
-    console.log("get feeds");
     this.apiService.getFeed(this.area.id).subscribe(data => this.feeds = [data]);  // TODO: choose feed differently
   }
 

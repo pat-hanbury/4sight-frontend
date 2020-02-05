@@ -1,12 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { ChartsModule } from 'ng2-charts'
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FeedViewComponent } from './feed-view/feed-view.component';
 import { StatViewComponent } from './stat-view/stat-view.component';
+import { GraphComponent } from './graph/graph.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,13 @@ import { StatViewComponent } from './stat-view/stat-view.component';
     HeaderComponent,
     DashboardComponent,
     FeedViewComponent,
-    StatViewComponent
+    StatViewComponent,
+    GraphComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartsModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]

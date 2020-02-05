@@ -27,7 +27,6 @@ export class ApiService {
                       count: 10,
                       url: FEED_API_URL(feed_id),
                     };
-    console.log("service");
     return of(temp);
   }
 }

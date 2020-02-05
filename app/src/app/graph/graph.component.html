@@ -1,0 +1,12 @@
+<div>
+    <canvas
+        baseChart
+        [chartType]="chart_type"
+        [datasets]="y_axis_data"
+        [labels]="x_axis_labels"
+        [options]="chartOptions"
+        [legend]="false"
+        (chartClick)="onChartClick($event)">
+    </canvas>
+</div>
+
