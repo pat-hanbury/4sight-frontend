@@ -1,2 +1,5 @@
-<p>stat-view works!</p>
-<app-graph></app-graph>>
+<div ng-if="area.name !== undefined">
+    <h1 style="text-align: center">{{ area.name }} Statistics! </h1>
+
+    <app-graph [area]="area" ></app-graph>
+</div>

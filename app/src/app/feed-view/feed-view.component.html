@@ -1,6 +1,6 @@
-<div>{{ area.name }}</div>
+<h2 ng-if="area.name !== undefined">{{ area.name }} with {{ area.count }} people</h2>
 <ul>
-    <li *ngFor="let feed of feeds">
+    <li *ngFor="let feed of area.feeds">
         <img src="{{ feed.url }}">
     </li>
 </ul>

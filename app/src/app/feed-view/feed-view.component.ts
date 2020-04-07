@@ -15,8 +15,6 @@ export class FeedViewComponent implements OnInit {
 
   area: Area;
 
-  feeds: Feed[];
-
   constructor(
     private route: ActivatedRoute,    // the route that got us here
     private apiService: ApiService,   // connection to the backend API
@@ -25,17 +23,12 @@ export class FeedViewComponent implements OnInit {
 
   ngOnInit() {
     this.getArea();
-    this.getFeeds();
   }
 
   getArea(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
+    const id = +this.route.snapshot.paramMap.get('area_id');
     this.apiService.getArea(id)
-      .subscribe(data => this.area = data);
-  }
-
-  getFeeds() {
-    this.apiService.getFeed(this.area.id).subscribe(data => this.feeds = [data]);  // TODO: choose feed differently
+      .subscribe(data => this.area = this.apiService.toArea(data));
   }
 
   goBack() {

@@ -8,8 +8,8 @@ import { StatViewComponent } from './stat-view/stat-view.component';
 const routes: Routes = [
   { path: '', redirectTo: '/areas', pathMatch: 'full' },
   { path: 'areas', component: DashboardComponent },
-  { path: 'feeds/:id', component: FeedViewComponent },
-  { path: 'stats', component: StatViewComponent },
+  { path: 'feeds/:area_id', component: FeedViewComponent },
+  { path: 'stats/:area_id', component: StatViewComponent },
 
 ];
 

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ChartsModule } from 'ng2-charts'
 
@@ -24,6 +25,7 @@ import { GraphComponent } from './graph/graph.component';
     BrowserModule,
     AppRoutingModule,
     ChartsModule, 
+    HttpClientModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]

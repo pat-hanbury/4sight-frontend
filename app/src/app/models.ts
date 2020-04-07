@@ -1,15 +1,22 @@
 // This is a file with types that are returned from the API
 // it is just helpful for typing each variable
 
-export class Area {
+export interface Feed {
     id: number;
+    area_id: number;
     name: string;
-    img: string;
+    url: string;
 }
 
-export class Feed {
+export interface Area {
     id: number;
     name: string;
+    img: string;  // TODO: this should be a type ...
     count: number;
-    url: string;
+    feeds: Feed[];
+}
+
+export interface Count {
+    date: string;
+    count: number;
 }

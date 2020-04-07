@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
 
   getAreas(): void {
     // this is a asyncronos call to the api 
-    this.apiService.getAreas().subscribe(data => this.areas = data);
+    this.apiService.getAreas().subscribe(data => this.areas = this.apiService.toAreas(data));
   }
 
 
